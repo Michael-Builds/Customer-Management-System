@@ -1,23 +1,23 @@
 .no-internet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  .error-message {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .icon {
-    font-size: 60px;
-    color: #ff7f50;
-    margin-bottom: 20px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 60px;
+  color: #ff7f50;
+  margin-bottom: 20px;
+}

@@ -1,24 +1,26 @@
-import { useRouter } from "next/router";
-import styles from "./page.module.css";
 import { TopBar } from "../Navigation/TopNavigation";
 import { SideNav } from "../Navigation/SideNavigation";
-import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import styles from "./page.module.css";
+import { MantineProvider } from "@mantine/core";
 
-export const PageLayout = () => {
+const PageLayout = ({ children }: any) => {
   return (
-    <main>
-      <div className={styles.main_container}>
-        <div className="flex h-screen overflow-hidden">
-          <div>
-            <SideNav />
-          </div>
-          <div className="w-full">
-            <TopBar />
-            <Outlet />
+    <MantineProvider>
+      <main>
+        <div className={styles.main_container}>
+          <div className="flex h-screen overflow-hidden">
+            <div>
+              <SideNav />
+            </div>
+            <div className="w-full">
+              <TopBar />
+              {children}
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </MantineProvider>
   );
 };
+
+export default PageLayout;

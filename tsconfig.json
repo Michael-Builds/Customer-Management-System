@@ -16,6 +16,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Navigation/SideNavigation/index.tsx", "src/components/Navigation/SideNavigation/routes.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/Navigation/SideNavigation/index.tsx", "src/components/Navigation/SideNavigation/routes.jsx", "src/components/Auth/PageLayout.js"],
   "exclude": ["node_modules"]
 }
