@@ -1,13 +1,11 @@
 import React from "react";
-import PageLayout from "@/components/Auth/PageLayout";
+import withLayout from "@/components/Auth/WithLayout";
 
 const Main = () => {
   return (
-    <PageLayout>
-      <div>
-        <p>Dashboard</p>
-      </div>
-    </PageLayout>
+    <div className="w-full h-full ">
+      <p>Dashboard</p>
+    </div>
   );
 };
-export default Main;
+export default withLayout(Main);
