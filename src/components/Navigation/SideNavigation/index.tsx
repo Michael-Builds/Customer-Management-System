@@ -31,8 +31,8 @@ const routes = [
     href: "#",
     icon: <BsCart3 size="1rem" stroke={`${1.5}`} />,
     children: [
-      { icons: "", label: "Add New Product", href: "#required-for-focus" },
-      { icons: "", label: "Manage Products", href: "#required-for-focus" },
+      { icons: "", label: "Add New Product", href: "#" },
+      { icons: "", label: "Manage Products", href: "#" },
       { icons: "", label: "Product Categories", href: "#required-for-focus" },
     ],
   },
@@ -110,7 +110,11 @@ const routes = [
         label: "FAQs & Knowledge Base",
         href: "#required-for-focus",
       },
-      { icons: <MdOutlineForum size="0.9rem" />, label: "Community Forums ", href: "#required-for-focus" },
+      {
+        icons: <MdOutlineForum size="0.9rem" />,
+        label: "Community Forums ",
+        href: "#required-for-focus",
+      },
       { icons: "", label: "Contact Support", href: "#required-for-focus" },
     ],
   },
@@ -174,13 +178,7 @@ export const SideNav = () => {
                   }`}
                 >
                   <div
-                    title={
-                      !isOpen
-                        ? route.label
-                          ? route.label.toLowerCase()
-                          : ""
-                        : ""
-                    }
+                    title={ !isOpen ? route.label ? route.label.toLowerCase() : "" : "" }
                     onClick={() => toggleRouteExpansion(route.label)}
                     className={`p-5 py-7 flex justify-between whitespace-nowrap items-center ease-in duration-100 hover:ease-in-out hover:bg-gray-500 hover:text-white h-2 cursor-pointer`}
                   >
@@ -214,13 +212,7 @@ export const SideNav = () => {
                           <NavLink
                             href={child.href}
                             className="p-4 pl-12 py-6 flex justify-between font-public whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:bg-gray-500  hover:text-white h-6"
-                            title={
-                              !isOpen
-                                ? child.label
-                                  ? child.label.toLowerCase()
-                                  : ""
-                                : ""
-                            }
+                            title={ !isOpen ? child.label  ? child.label.toLowerCase()  : "" : ""}
                           >
                             <div className="flex gap-4 items-center">
                               <div className="flex text-md">{child.icons}</div>
@@ -246,13 +238,7 @@ export const SideNav = () => {
                 </div>
               ) : (
                 <NavLink
-                  title={
-                    !isOpen
-                      ? route.label
-                        ? route.label.toLowerCase()
-                        : ""
-                      : ""
-                  }
+                  title={ !isOpen ? route.label ? route.label.toLowerCase() : "" : "" }
                   key={index}
                   href={route.href}
                   className="p-5 py-6 flex justify-between whitespace-nowrap font-public items-center ease-in duration-150 hover:ease-in hover:bg-gray-500  hover:text-white h-6"

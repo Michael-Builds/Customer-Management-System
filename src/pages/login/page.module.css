@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(52, 110, 224, 1);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: -8px;
+}
+
+.formContainer {
+  background-color: white;
+  width: 45vh;
+  height: 36vh;
+  border-radius: 5px;
+}
+
+.forgot_password {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.sign_up {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.no_account_text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+.signup {
+  color: white;
+}
+.form {
+  padding: 20px;
+}
+.others {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
