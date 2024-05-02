@@ -1,10 +1,11 @@
 import React from "react";
 import withLayout from "@/components/Auth/WithLayout";
+import Dashboard from "@/components/Dashboard";
 
 const Main = () => {
   return (
-    <div className="w-full h-full ">
-      <p>Dashboard</p>
+    <div>
+      <Dashboard />
     </div>
   );
 };
