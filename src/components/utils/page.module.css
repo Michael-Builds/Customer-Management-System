@@ -9,3 +9,62 @@
   font-size: 13px;
   margin-left: 2px;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 38vh;
+  height: 13vh;
+  border: 1px solid #c9ccd0;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -0.8rem;
+}
+.title {
+  font-weight: 500;
+}
+
+.period {
+  font-size: 11px;
+  background-color: rgba(52, 110, 224, 0.18);
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  white-space: nowrap;
+  color: #346ee0;
+  box-shadow: none;
+}
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.value {
+  font-size: 1.875rem;
+  color: rgb(76, 76, 76);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.rate {
+  font-size: 14px;
+}
+.icon {
+  font-size: 14px;
+}
+/* .progress{
+  margin-top: 12px;
+} */

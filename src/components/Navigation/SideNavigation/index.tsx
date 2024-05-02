@@ -16,6 +16,7 @@ import { PiUsersThreeFill } from "react-icons/pi";
 import { BsFillMegaphoneFill } from "react-icons/bs";
 import { AiOutlineFileText } from "react-icons/ai";
 import { FaQuestion } from "react-icons/fa6";
+import { useRouter } from "next/router";
 
 const NavLink = dynamic(() => import("next/link"));
 
@@ -31,7 +32,7 @@ const routes = [
     href: "#",
     icon: <BsCart3 size="1rem" stroke={`${1.5}`} />,
     children: [
-      { icons: "", label: "Add New Product", href: "#" },
+      { icons: "", label: "Add New Product", href: "/login" },
       { icons: "", label: "Manage Products", href: "#" },
       { icons: "", label: "Product Categories", href: "#required-for-focus" },
     ],
@@ -156,6 +157,12 @@ export const SideNav = () => {
     });
   };
 
+  const router = useRouter();
+
+  const isNavLinkActive = (href: string) => {
+    return router.pathname === href;
+  };
+
   return (
     <div className={styles.sidebar}>
       <div className={styles.site_logo}>
@@ -173,14 +180,11 @@ export const SideNav = () => {
               route.children.length > 0 ? (
                 <div
                   key={index}
-                  className={`${
-                    expandedRoutes[route.label] && "shadow-sm bg-opacity-30 "
-                  }`}
-                >
+                  className={`${expandedRoutes[route.label] && "shadow-sm bg-opacity-30 " }`} >
                   <div
                     title={ !isOpen ? route.label ? route.label.toLowerCase() : "" : "" }
                     onClick={() => toggleRouteExpansion(route.label)}
-                    className={`p-5 py-7 flex justify-between whitespace-nowrap items-center ease-in duration-100 hover:ease-in-out hover:bg-gray-500 hover:text-white h-2 cursor-pointer`}
+                    className={`p-5 py-7 flex justify-between whitespace-nowrap items-center ease-in duration-100 hover:ease-in-out hover:bg-gray-600 hover:text-white h-2 cursor-pointer`}
                   >
                     <div className="flex gap-4 items-center ">
                       <div className="flex text-lg">{route.icon}</div>
@@ -206,12 +210,14 @@ export const SideNav = () => {
                     )}
                   </div>
                   {expandedRoutes[route.label] && (
-                    <ul>
+                    <ul className="">
                       {route.children.map((child, childIndex) => (
                         <li key={childIndex}>
                           <NavLink
                             href={child.href}
-                            className="p-4 pl-12 py-6 flex justify-between font-public whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:bg-gray-500  hover:text-white h-6"
+                            className={`p-4 pl-6 py-6 list-disc flex justify-between font-public whitespace-nowrap items-center ease-in duration-150 hover:ease-in hover:bg-gray-600  hover:text-white h-6 ${
+                              isNavLinkActive(child.href) ? "bg-gray-600 text-white" : ""
+                            }`}
                             title={ !isOpen ? child.label  ? child.label.toLowerCase()  : "" : ""}
                           >
                             <div className="flex gap-4 items-center">
@@ -241,7 +247,9 @@ export const SideNav = () => {
                   title={ !isOpen ? route.label ? route.label.toLowerCase() : "" : "" }
                   key={index}
                   href={route.href}
-                  className="p-5 py-6 flex justify-between whitespace-nowrap font-public items-center ease-in duration-150 hover:ease-in hover:bg-gray-500  hover:text-white h-6"
+                  className={`p-5 py-6 flex justify-between whitespace-nowrap font-public items-center ease-in duration-150 hover:ease-in hover:bg-gray-600  hover:text-white h-6 ${
+                    isNavLinkActive(route.href) ? "bg-gray-600 text-white" : ""
+                  }`}
                 >
                   <div className="flex gap-4 items-center">
                     <div className="flex text-xl">{route.icon}</div>
