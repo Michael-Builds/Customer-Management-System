@@ -18,7 +18,7 @@ export const TopBar = () => {
   const toggleIcon = () => {
     setIsMoonActive((prev) => !prev);
   };
-
+  
   return (
     <div className={styles.topbar}>
       <div className={styles.top_items}>

@@ -1,7 +1,16 @@
-import React from "react";
-import styles from "./page.module.css";
+import React from "react"
+import styles from "./page.module.css"
+import { Progress } from "@mantine/core"
 
-const DashboardCard = ({ title, value, icon, percent, rate, period }: any) => {
+const DashboardCard = ({
+  title,
+  value,
+  icon,
+  progressValue,
+  rate,
+  period,
+  color,
+}: any) => {
   return (
     <div
       className={`${styles.card} shadow-lg p-6  items-center justify-between`}
@@ -18,10 +27,10 @@ const DashboardCard = ({ title, value, icon, percent, rate, period }: any) => {
         </div>
       </div>
       <div className={styles.progress}>
-        {/* <ProgressComponent percent={percent} /> */}
+        <Progress value={progressValue} color={color} className={ styles.pheight} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DashboardCard;
+export default DashboardCard

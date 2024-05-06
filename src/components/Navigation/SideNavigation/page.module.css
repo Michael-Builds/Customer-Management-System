@@ -6,6 +6,8 @@
   width: 16rem;
   /* overflow-y: scroll !important;
   overflow-x: hidden; */
+  font-family: "Nunito", sans-serif;
+
 }
 .sidebar::-webkit-scrollbar-thumb {
   background-color: #888;

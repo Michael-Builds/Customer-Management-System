@@ -4,6 +4,10 @@
   justify-content: center;
   gap: 4px;
 }
+.bar,
+.pie {
+  border: 1px solid #e9edf3;
+}
 
 .name {
   font-size: 13px;
@@ -13,11 +17,14 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 38vh;
-  height: 13vh;
-  border: 1px solid #c9ccd0;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border: 1px solid #e9edf3;
   border-radius: 5px;
   background-color: white;
+  margin-bottom: 20px;
+  margin: 2px 20px;
 }
 
 .top {
@@ -26,6 +33,51 @@
   justify-content: space-between;
   width: 100%;
   margin-top: -0.8rem;
+}
+
+.top,
+.middle,
+.progress {
+  width: 100%;
+}
+.area {
+  border: 1px solid #e9edf3;
+}
+
+.progress {
+  height: 20px;
+  margin-top: 14px;
+  margin-bottom: -0.8rem;
+}
+.pheight {
+  height: 4px !important;
+}
+.ring {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 24px;
+}
+.income {
+  color: rgb(32 181 153);
+}
+.gains,
+.notgains {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+.amount {
+  font-weight: 500;
+  font-size: 18px;
+}
+.loss {
+  color: rgb(250 89 68);
 }
 .title {
   font-weight: 500;

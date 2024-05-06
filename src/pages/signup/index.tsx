@@ -7,7 +7,6 @@ import Link from "next/link";
 
 const Signup = () => {
   return (
-    <MantineProvider>
       <div className={styles.main}>
         <div className={styles.formContainer}>
           <div className={styles.logo}>
@@ -46,7 +45,6 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </MantineProvider>
   );
 };
 export default Signup;

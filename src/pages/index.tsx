@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import PageLayout from "@/components/Auth/PageLayout";
-import "@mantine/core/styles.css";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import NoInternetConnection from "@/components/Network/Network";
@@ -28,7 +27,7 @@ export default function Home() {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);
     };
-  }, []);
+  });
 
   return (
     <>

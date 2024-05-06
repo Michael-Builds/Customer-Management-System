@@ -1,5 +1,5 @@
-import React from "react";
-import PageLayout from "./PageLayout";
+import React from "react"
+import PageLayout from "./PageLayout"
 
 const withLayout = (WrappedComponent: any) => {
   return (props: any) => (
@@ -8,6 +8,6 @@ const withLayout = (WrappedComponent: any) => {
         <WrappedComponent {...props} />
       </PageLayout>
     </div>
-  );
-};
-export default withLayout;
+  )
+}
+export default withLayout
