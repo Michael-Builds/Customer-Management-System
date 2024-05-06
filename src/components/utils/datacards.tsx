@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./page.module.css";
-import ProgressComponent from "./progress";
 
 const DashboardCard = ({ title, value, icon, percent, rate, period }: any) => {
   return (
@@ -19,7 +18,7 @@ const DashboardCard = ({ title, value, icon, percent, rate, period }: any) => {
         </div>
       </div>
       <div className={styles.progress}>
-        <ProgressComponent percent={percent} />
+        {/* <ProgressComponent percent={percent} /> */}
       </div>
     </div>
   );

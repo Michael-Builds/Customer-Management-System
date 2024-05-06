@@ -12,7 +12,6 @@ const Dashboard = () => {
       icon: <RxArrowUp className="text-green-500" />,
       period: "Daily",
       rate: "12.5% ",
-      percent: 50,
     },
     {
       title: "Market Revenue",
@@ -20,7 +19,6 @@ const Dashboard = () => {
       icon: <PiArrowDownLight className="text-red-500" />,
       period: "Per Week",
       rate: "18.71%",
-      percent: 50,
     },
     {
       title: "Expenses",
@@ -28,7 +26,6 @@ const Dashboard = () => {
       icon: <RxArrowUp className="text-green-500" />,
       period: "Per Month",
       rate: "57% ",
-      percent: 50,
     },
     {
       title: "Daily Visits",
@@ -36,9 +33,9 @@ const Dashboard = () => {
       icon: <PiArrowDownLight className="text-red-500" />,
       period: "All Time",
       rate: "17.8% ",
-      percent: 50,
     },
   ];
+  
   return (
     <div className={styles.main}>
       <div className={styles.header}>
@@ -56,10 +53,11 @@ const Dashboard = () => {
             icon={item.icon}
             rate={item.rate}
             period={item.period}
-            percent={item.percent}
           />
         ))}
       </div>
+
+
     </div>
   );
 };
