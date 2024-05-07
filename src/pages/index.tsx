@@ -1,33 +1,39 @@
-import { Inter } from "next/font/google";
-import PageLayout from "@/components/Auth/PageLayout";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import NoInternetConnection from "@/components/Network/Network";
+import { Inter } from "next/font/google"
+import PageLayout from "@/components/Auth/PageLayout"
+import Head from "next/head"
+import { useEffect, useState } from "react"
+import NoInternetConnection from "@/components/Network/Network"
+import { useRouter } from "next/router"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
+  const router = useRouter()
   const [isOnline, setIsOnline] = useState(
     typeof window !== "undefined" ? navigator.onLine : true
-  );
+  )
+
+  useEffect(() => {
+    router.replace("/login")
+  }, [router])
 
   useEffect(() => {
     const handleOnline = () => {
-      setIsOnline(true);
-    };
+      setIsOnline(true)
+    }
 
     const handleOffline = () => {
-      setIsOnline(false);
-    };
+      setIsOnline(false)
+    }
 
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
+    window.addEventListener("online", handleOnline)
+    window.addEventListener("offline", handleOffline)
 
     return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-    };
-  });
+      window.removeEventListener("online", handleOnline)
+      window.removeEventListener("offline", handleOffline)
+    }
+  })
 
   return (
     <>
@@ -43,5 +49,5 @@ export default function Home() {
         {isOnline ? <PageLayout /> : <NoInternetConnection />}
       </main>
     </>
-  );
+  )
 }

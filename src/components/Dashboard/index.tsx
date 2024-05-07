@@ -6,6 +6,9 @@ import Link from "next/link"
 import { Bar_Chart } from "../utils/Bar"
 import { PieChart } from "../utils/Pie"
 import { AreaGraph } from "../utils/Area"
+import { Customers } from "../utils/Customers"
+import { Area2Graph } from "../utils/Area2"
+import { WaterMark } from "../utils/WaterMark"
 
 const Dashboard = () => {
   const data = [
@@ -72,6 +75,14 @@ const Dashboard = () => {
         <Bar_Chart />
         <PieChart />
         <AreaGraph />
+      </div>
+
+      <div className={styles.second_division}>
+        <Area2Graph />
+        <Customers />
+      </div>
+      <div className={styles.watermark}>
+        <WaterMark />
       </div>
     </div>
   )
