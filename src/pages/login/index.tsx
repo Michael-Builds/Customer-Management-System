@@ -3,8 +3,47 @@ import Image from "next/image"
 import Logo from "../../../public/Assets/logo-dark.png"
 import { TextInput, PasswordInput, Checkbox, Button } from "@mantine/core"
 import Link from "next/link"
+import { useRouter } from "next/router"
+import NotificationModal from "@/components/utils/NotificationModal"
+import { useState } from "react"
+
+const initialFormState = {
+  email: "",
+  password: "",
+}
 
 const Login = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalData, setModalData] = useState({
+    title: "",
+    description: "",
+    status: "success",
+  })
+  const closeModal = () => setIsModalOpen(false)
+  const [formData, setFormData] = useState(initialFormState)
+  const [loading, setLoading] = useState(false)
+  const router = useRouter()
+
+  const handleInputChange = (event: any) => {
+    const { name, value } = event.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleFormReset = () => {
+    setFormData({
+      email: "",
+      password: "",
+    })
+  }
+
+  const validateForm = () => {
+    return Object.values(formData).every((x) => x !== "")
+  }
+
+  const handleLogin = () => {
+    router.push("/dashboard")
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.formContainer}>
@@ -25,7 +64,7 @@ const Login = () => {
           />
 
           <Checkbox mt="lg" label="Remember me" />
-          <Button fullWidth className="mt-6">
+          <Button fullWidth className="mt-6" onClick={handleLogin}>
             Login
           </Button>
         </div>
@@ -41,6 +80,14 @@ const Login = () => {
           </span>
         </div>
       </div>
+      <NotificationModal
+        isOpen={isModalOpen}
+        setIsOpen={setIsModalOpen}
+        title={modalData.title}
+        description={modalData.description}
+        status={modalData.status || "success"}
+        onClose={closeModal}
+      />
     </div>
   )
 }

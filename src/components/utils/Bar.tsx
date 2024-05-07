@@ -47,8 +47,8 @@ export const Bar_Chart = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="imports" fill="#00c2b2" />
-            <Bar dataKey="exports" fill="red" />
+            <Bar dataKey="imports" fill="#00c2b2" barSize={10} />
+            <Bar dataKey="exports" fill="red" barSize={10} />
           </BarChart>
         </ResponsiveContainer>
       </div>

@@ -9,6 +9,15 @@
   border: 1px solid #e9edf3;
 }
 
+.customers {
+  background-color: white;
+  border: 1px solid #e9edf3;
+  padding: 12px;
+}
+
+.bar {
+  font-size: 14px;
+}
 .name {
   font-size: 13px;
   margin-left: 2px;
@@ -42,6 +51,7 @@
 }
 .area {
   border: 1px solid #e9edf3;
+  font-size: 14px;
 }
 
 .progress {
@@ -120,3 +130,32 @@
 /* .progress{
   margin-top: 12px;
 } */
+
+.area2 {
+  width: 100%;
+  border: 1px solid #e9edf3;
+  font-size: 14px;
+}
+
+.header {
+  font-weight: 600;
+  color: rgb(49, 49, 49);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.mark {
+  display: flex;
+  justify-content: space-between;
+}
+.tag {
+  font-size: 15px;
+}
+.developer{
+  display: flex;
+  font-size: 15px;
+  gap: 3px;
+}
+.mike{
+  color: rgb(52 110 224);
+}
