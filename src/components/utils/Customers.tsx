@@ -41,7 +41,7 @@ const people = [
 
 export const Customers = () => {
   return (
-    <div className={`${styles.customers} rounded-lg`}>
+    <div className={`${styles.customers} rounded-lg shadow-lg`}>
       <div className="mt-4 flow-root ">
         <h1 className="-mt-5 text-lg font-semibold">Top 5 Customers</h1>
         <p className="text-sm mb-2">
