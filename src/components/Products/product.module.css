@@ -1,0 +1,108 @@
+.main {
+  height: 100vh;
+  padding: 15px 25px;
+  overflow-y: scroll !important;
+  padding-bottom: 4rem;
+  font-family: "Nunito", sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  align-items: center;
+  padding: 2px 6px;
+}
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.handlers {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgb(12 74 110);
+  color: white;
+  width: 6rem;
+  height: 2.2rem;
+  border-radius: 3px;
+  cursor: pointer;
+  padding-right: 6px;
+}
+.add:hover {
+  background-color: rgb(7, 46, 68);
+}
+
+.export,
+.import,
+.print {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgb(12 74 110);
+  border-radius: 3px;
+  padding: 3px;
+  width: 6rem;
+  background-color: rgb(12 74 110);
+  color: white;
+}
+
+.export,
+.import,
+.print p {
+  font-size: 14px;
+}
+
+.icon {
+  color: white;
+  font-size: 18px;
+}
+
+.modal {
+  width: 100rem;
+}
+
+.table {
+  margin-top: 3rem;
+  padding: 5px;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons {
+  width: 100%;
+  margin-bottom: 3.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  width: 5.6rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: rgb(12 74 110);
+  color: white;
+  border-radius: 3px;
+}
+.disabledButton {
+  background-color: rgb(22, 136, 202);
+  cursor: not-allowed;
+}

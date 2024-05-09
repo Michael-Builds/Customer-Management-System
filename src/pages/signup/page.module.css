@@ -21,6 +21,8 @@
   background-color: white;
   width: 45vh;
   height: 44vh;
+  min-height: 400px;
+  min-width: 400px;
   border-radius: 5px;
 }
 
@@ -45,6 +47,7 @@
 }
 .form {
   padding: 20px;
+  /* max-width: 600px; */
 }
 .others {
   text-align: center;

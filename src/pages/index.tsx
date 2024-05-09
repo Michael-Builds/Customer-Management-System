@@ -12,10 +12,9 @@ export default function Home() {
   const [isOnline, setIsOnline] = useState(
     typeof window !== "undefined" ? navigator.onLine : true
   )
-
   useEffect(() => {
     router.replace("/login")
-  }, [router])
+  }, [router]);
 
   useEffect(() => {
     const handleOnline = () => {

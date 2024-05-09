@@ -1,10 +1,7 @@
-import { IoIosNotifications } from "react-icons/io";
-import { Menu, rem } from "@mantine/core";
-import {
-  IconSettings,
-  IconPhoto,
-  IconMessageCircle,
-} from "@tabler/icons-react";
+import { IoIosNotifications } from "react-icons/io"
+import { Menu, rem } from "@mantine/core"
+import { IconSettings, IconPhoto, IconMessageCircle } from "@tabler/icons-react"
+import styles from "./page.module.css"
 
 const Notification = () => {
   return (
@@ -12,7 +9,9 @@ const Notification = () => {
       <Menu shadow="md" width={300}>
         <Menu.Target>
           <div>
-          <IoIosNotifications className="h-6 w-6 text-gray-700 cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500 transform hover:scale-100" />
+            <IoIosNotifications
+              className={` ${styles.icon} h-6 w-6  cursor-pointer transition-all duration-300 ease-in-out hover:text-blue-500 transform hover:scale-100 `}
+            />
             <div className="absolute -top-1 -right-1 bg-red-500 rounded-full h-4 w-4 flex items-center justify-center text-white text-xs">
               5
             </div>
@@ -51,7 +50,7 @@ const Notification = () => {
         </Menu.Dropdown>
       </Menu>
     </div>
-  );
-};
+  )
+}
 
-export default Notification;
+export default Notification

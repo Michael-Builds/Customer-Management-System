@@ -14,7 +14,9 @@
   border: 1px solid #e9edf3;
   padding: 12px;
 }
-
+.icon {
+  color: rgb(12 74 110);
+}
 .bar {
   font-size: 14px;
 }
@@ -151,11 +153,11 @@
 .tag {
   font-size: 15px;
 }
-.developer{
+.developer {
   display: flex;
   font-size: 15px;
   gap: 3px;
 }
-.mike{
+.mike {
   color: rgb(52 110 224);
 }

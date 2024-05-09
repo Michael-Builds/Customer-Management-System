@@ -1,6 +1,6 @@
-import { TopBar } from "../Navigation/TopNavigation";
-import { SideNav } from "../Navigation/SideNavigation";
-import styles from "./page.module.css";
+import { TopBar } from "../Navigation/TopNavigation"
+import { SideNav } from "../Navigation/SideNavigation"
+import styles from "./page.module.css"
 
 const PageLayout = ({ children }: any) => {
   return (
@@ -17,7 +17,7 @@ const PageLayout = ({ children }: any) => {
         </div>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default PageLayout;
+export default PageLayout

@@ -2,7 +2,6 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Logo from "../../../public/Assets/logo-dark.png";
 import { TextInput, PasswordInput, Checkbox, Button } from "@mantine/core";
-import { MantineProvider } from "@mantine/core";
 import Link from "next/link";
 
 const Signup = () => {
