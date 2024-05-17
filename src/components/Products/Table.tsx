@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styles from "./product.module.css"
+import styles from "./ManageProducts/product.module.css"
 import { RiDeleteBin6Line } from "react-icons/ri"
 import { PiNotePencilDuotone } from "react-icons/pi"
 import { MdKeyboardArrowRight } from "react-icons/md"
