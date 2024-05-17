@@ -5,6 +5,7 @@ import { PiNotePencilDuotone } from "react-icons/pi"
 import { MdKeyboardArrowRight } from "react-icons/md"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { Checkbox } from "@mantine/core"
+import Image from "next/image"
 
 const itemsPerPage = 10
 
@@ -74,10 +75,10 @@ const Table = () => {
                   <td className="whitespace-nowrap pl-4 pr-3 py-1.5 text-sm sm:pl-0">
                     <div className="flex items-center pl-4">
                       <div className="h-11 w-11 flex-shrink-0">
-                        <img
+                        <Image
                           className="h-11 w-11 rounded-full"
                           src={person.image}
-                          alt=""
+                          alt="user image"
                         />
                       </div>
                       <div className="ml-4">

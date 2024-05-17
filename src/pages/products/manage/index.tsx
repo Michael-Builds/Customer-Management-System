@@ -1,8 +1,8 @@
 import withLayout from "@/components/Auth/WithLayout"
 import ManageProducts from "@/components/Products/ManageProducts"
 
-const Manage = () => {
+const index = () => {
   return <ManageProducts />
 }
 
-export default withLayout(Manage)
+export default withLayout(index)

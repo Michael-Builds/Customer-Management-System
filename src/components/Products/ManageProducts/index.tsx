@@ -3,7 +3,7 @@ import styles from "./product.module.css"
 import { CiImport } from "react-icons/ci"
 import { CiExport } from "react-icons/ci"
 import { FiPrinter } from "react-icons/fi"
-import Table from "./Table"
+import Table from "../Table"
 
 const ManageProducts = () => {
   const handleExport = () => {

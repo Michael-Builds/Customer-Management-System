@@ -1,7 +1,7 @@
 import { forwardRef } from "react"
 import { MantineLoaderComponent } from "@mantine/core"
 
-export const RingLoader: MantineLoaderComponent = forwardRef(
+const RingLoader: MantineLoaderComponent = forwardRef(
   ({ style, ...others }, ref) => (
     <svg
       {...others}
@@ -88,3 +88,7 @@ export const RingLoader: MantineLoaderComponent = forwardRef(
     </svg>
   )
 )
+
+RingLoader.displayName = "RingLoader"
+
+export { RingLoader }
