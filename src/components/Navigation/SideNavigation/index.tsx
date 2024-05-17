@@ -32,8 +32,8 @@ const routes = [
     href: "#",
     icon: <BsCart3 size="1rem" stroke={`${1.5}`} />,
     children: [
-      { icons: "", label: "Add Products", href: "/(products)/add" },
-      { icons: "", label: "Manage Products", href: "/(products)/manage" },
+      { icons: "", label: "Add Products", href: "/products/add" },
+      { icons: "", label: "Manage Products", href: "/products/manage" },
       { icons: "", label: "Product Categories", href: "/productCategories" },
     ],
   },
