@@ -32,8 +32,8 @@ const routes = [
     href: "#",
     icon: <BsCart3 size="1rem" stroke={`${1.5}`} />,
     children: [
-      { icons: "", label: "Add Products", href: "/products/add" },
-      { icons: "", label: "Manage Products", href: "/products/manage" },
+      { icons: "", label: "Add Products", href: "/(products)/add" },
+      { icons: "", label: "Manage Products", href: "/(products)/manage" },
       { icons: "", label: "Product Categories", href: "/productCategories" },
     ],
   },
@@ -166,7 +166,9 @@ export const SideNav = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.site_logo}>
-        <Image src={Logo} alt="Logo" priority height={28} width={28} />
+        <>
+          <Image src={Logo} alt="Logo" priority height={28} width={28} />
+        </>
       </div>
       <section className="mt-10 pb-3 ">
         <motion.div

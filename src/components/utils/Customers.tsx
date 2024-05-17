@@ -94,6 +94,8 @@ export const Customers = () => {
                             className="h-11 w-11 rounded-full"
                             src={person.image}
                             alt=""
+                            height={12}
+                            width={12}
                           />
                         </div>
                         <div className="ml-4 font-medium text-gray-900">

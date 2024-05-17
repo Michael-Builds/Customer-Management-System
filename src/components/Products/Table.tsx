@@ -75,11 +75,15 @@ const Table = () => {
                   <td className="whitespace-nowrap pl-4 pr-3 py-1.5 text-sm sm:pl-0">
                     <div className="flex items-center pl-4">
                       <div className="h-11 w-11 flex-shrink-0">
-                        <Image
-                          className="h-11 w-11 rounded-full"
-                          src={person.image}
-                          alt="user image"
-                        />
+                        <>
+                          <Image
+                            className="h-11 w-11 rounded-full"
+                            src={person.image}
+                            alt="user image"
+                            width={28}
+                            height={28}
+                          />
+                        </>
                       </div>
                       <div className="ml-4">
                         <div className="font-medium text-gray-900">

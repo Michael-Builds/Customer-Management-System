@@ -1,10 +1,10 @@
 import { Inter } from "next/font/google"
 import PageLayout from "@/components/Auth/PageLayout"
 import Head from "next/head"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import NoInternetConnection from "@/components/Network/Network"
 import { useRouter } from "next/router"
-
+import Login from "@/components/Login/Login"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
@@ -12,9 +12,8 @@ export default function Home() {
   const [isOnline, setIsOnline] = useState(
     typeof window !== "undefined" ? navigator.onLine : true
   )
-  useEffect(() => {
-    router.replace("/login")
-  }, [router]);
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   useEffect(() => {
     const handleOnline = () => {
@@ -34,6 +33,13 @@ export default function Home() {
     }
   })
 
+  const handleSetIsAuthenticated = useCallback(
+    (value: any) => {
+      setIsAuthenticated(value)
+    },
+    [setIsAuthenticated]
+  )
+
   return (
     <>
       <Head>
@@ -45,7 +51,15 @@ export default function Home() {
       <main
         className={`flex min-h-screen bg-white w-full flex-col items-center justify-between ${inter.className}`}
       >
-        {isOnline ? <PageLayout /> : <NoInternetConnection />}
+        {isOnline ? (
+          isAuthenticated ? (
+            <PageLayout />
+          ) : (
+            <Login setIsAuthenticated={handleSetIsAuthenticated} />
+          )
+        ) : (
+          <NoInternetConnection />
+        )}
       </main>
     </>
   )

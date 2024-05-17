@@ -12,7 +12,7 @@ const initialFormState = {
   password: "",
 }
 
-const Login = () => {
+const Login = ({ setIsAuthenticated }: any) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalData, setModalData] = useState({
     title: "",
@@ -41,14 +41,28 @@ const Login = () => {
   }
 
   const handleLogin = () => {
-    router.push("/dashboard")
+    const isAuthenticated = true
+
+    setIsAuthenticated(isAuthenticated)
+    if (isAuthenticated) {
+      router.push("/dashboard")
+    } else {
+      setModalData({
+        title: "Authentication Failed",
+        description: "Invalid email or password.",
+        status: "error",
+      })
+      setIsModalOpen(true)
+    }
   }
 
   return (
     <div className={styles.main}>
       <div className={styles.formContainer}>
         <div className={styles.logo}>
-          <Image src={Logo} height={160} width={160} alt="Logo" />
+          <>
+            <Image src={Logo} height={160} width={160} alt="Logo" />
+          </>
         </div>
         <div className={styles.form}>
           <TextInput
