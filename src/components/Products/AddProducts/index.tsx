@@ -31,6 +31,7 @@ const ProductInformation = () => {
     </div>
   )
 }
+// Working on the New Changes
 
 // Component for pricing information
 const PricingInformation = () => {
