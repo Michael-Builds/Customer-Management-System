@@ -166,7 +166,7 @@ export const SideNav = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.site_logo}>
-        <Image src={Logo} alt="Logo" priority height={28} />
+        <Image src={Logo} alt="Logo" priority height={28} width={28} />
       </div>
       <section className="mt-10 pb-3 ">
         <motion.div
