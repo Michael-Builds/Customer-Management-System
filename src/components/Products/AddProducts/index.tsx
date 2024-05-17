@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styles from "./addProduct.module.css"
+import styles from "./page.module.css"
 import { MdOutlineCheck } from "react-icons/md"
 import { RiAddLine } from "react-icons/ri"
 

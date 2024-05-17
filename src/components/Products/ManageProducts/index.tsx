@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./product.module.css"
+import styles from "./page.module.css"
 import { CiImport } from "react-icons/ci"
 import { CiExport } from "react-icons/ci"
 import { FiPrinter } from "react-icons/fi"
