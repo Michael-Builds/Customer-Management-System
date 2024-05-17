@@ -66,8 +66,8 @@ const Table = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white">
-              {currentData.map((person) => (
-                <tr key={person.email} className={styles.details}>
+              {currentData.map((person, index) => (
+                <tr key={index} className={styles.details}>
                   <td className="pl-4">
                     <Checkbox size="16" />
                   </td>
@@ -148,6 +148,7 @@ export default Table
 
 export const people = [
   {
+    id: 1,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -157,6 +158,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 2,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -166,6 +168,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 3,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -175,6 +178,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 4,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -184,6 +188,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 5,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -193,6 +198,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 6,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -202,6 +208,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 7,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -211,6 +218,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 8,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -220,6 +228,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 9,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -229,6 +238,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 10,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -238,6 +248,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 11,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -247,6 +258,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 12,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -256,6 +268,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 13,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -265,6 +278,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 14,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -274,6 +288,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 15,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -283,6 +298,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 16,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",
@@ -292,6 +308,7 @@ export const people = [
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
+    id: 17,
     name: "Lindsay Walton",
     title: "Front-end Developer",
     department: "Optimization",

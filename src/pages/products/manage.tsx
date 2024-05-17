@@ -1,9 +1,8 @@
-import React from "react"
 import withLayout from "@/components/Auth/WithLayout"
 import ManageProducts from "@/components/Products/ManageProducts"
 
-const Products = () => {
+const Manage = () => {
   return <ManageProducts />
 }
 
-export default withLayout(Products)
+export default withLayout(Manage)
