@@ -1,6 +1,10 @@
 import { TopBar } from "../Navigation/TopNavigation"
 import { SideNav } from "../Navigation/SideNavigation"
 import styles from "./page.module.css"
+import { memo } from "react";
+
+const MemoizedSideNav = memo(SideNav);
+const MemoizedTopBar = memo(TopBar);
 
 const PageLayout = ({ children }: any) => {
   return (
@@ -8,10 +12,10 @@ const PageLayout = ({ children }: any) => {
       <div className={styles.main_container}>
         <div className="flex h-screen overflow-hidden">
           <div>
-            <SideNav />
+          <MemoizedSideNav />
           </div>
           <div className="w-full">
-            <TopBar />
+          <MemoizedTopBar />
             {children}
           </div>
         </div>

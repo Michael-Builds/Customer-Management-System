@@ -1,14 +1,17 @@
 import { Inter } from "next/font/google"
-import PageLayout from "@/components/Auth/PageLayout"
 import Head from "next/head"
-import { useCallback, useEffect, useState } from "react"
+import { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import NoInternetConnection from "@/components/Network/Network"
 import { useRouter } from "next/router"
-import Login from "@/components/Login/Login"
 const inter = Inter({ subsets: ["latin"] })
+
+const PageLayout = lazy(() => import("@/components/Auth/PageLayout"));
+const Login = lazy(() => import("@/components/Login/Login"));
+
 
 export default function Home() {
   const router = useRouter()
+
   const [isOnline, setIsOnline] = useState(
     typeof window !== "undefined" ? navigator.onLine : true
   )
@@ -34,7 +37,7 @@ export default function Home() {
   })
 
   const handleSetIsAuthenticated = useCallback(
-    (value: any) => {
+    (value: boolean) => {
       setIsAuthenticated(value)
     },
     [setIsAuthenticated]
@@ -53,9 +56,13 @@ export default function Home() {
       >
         {isOnline ? (
           isAuthenticated ? (
-            <PageLayout />
+            <Suspense fallback={<div>Loading...</div>}>
+              <PageLayout />
+            </Suspense>
           ) : (
-            <Login setIsAuthenticated={handleSetIsAuthenticated} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Login setIsAuthenticated={handleSetIsAuthenticated} />
+            </Suspense>
           )
         ) : (
           <NoInternetConnection />

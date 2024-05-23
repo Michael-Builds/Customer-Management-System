@@ -9,12 +9,10 @@ import { useState } from "react"
 
 const initialFormState = {
   email: "",
-  password: "",
 }
 
-const Login = ({ setIsAuthenticated }: any) => {
+const ForgotPassword = ({ setIsAuthenticated }: any) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  
   const [modalData, setModalData] = useState({
     title: "",
     description: "",
@@ -33,7 +31,6 @@ const Login = ({ setIsAuthenticated }: any) => {
   const handleFormReset = () => {
     setFormData({
       email: "",
-      password: "",
     })
   }
 
@@ -72,26 +69,17 @@ const Login = ({ setIsAuthenticated }: any) => {
             placeholder="Enter your email"
             className="text-gray-600"
           />
-          <PasswordInput
-            label="Password"
-            placeholder="Enter your password"
-            className="mt-3 text-gray-600"
-          />
-
           <Checkbox mt="lg" label="Remember me" />
           <Button fullWidth className="mt-6" onClick={handleLogin}>
-            Login
+            Reset Password
           </Button>
         </div>
       </div>
       <div className={styles.others}>
-        <p className={styles.forgot_password}>
-          <a href="#">Forgot your password?</a>
-        </p>
         <div className={styles.sign_up}>
-          <p className={styles.no_account_text}>Do not have an account?</p>
+          <p className={styles.no_account_text}>Already have an account?</p>
           <span className={styles.signup}>
-            <Link href="/signup">Sign up</Link>
+            <Link href="/login">Login</Link>
           </span>
         </div>
       </div>
@@ -106,4 +94,4 @@ const Login = ({ setIsAuthenticated }: any) => {
     </div>
   )
 }
-export default Login
+export default ForgotPassword

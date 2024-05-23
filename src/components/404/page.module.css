@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+  background-color: rgba(52, 110, 224, 1);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: -10px;
+}
+
+.formContainer {
+  background-color: white;
+  width: 45vh;
+  height: 25vh;
+  min-height: 365px;
+  min-width: 400px;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+
