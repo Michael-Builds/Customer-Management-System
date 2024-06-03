@@ -1,13 +1,14 @@
 import { Inter } from "next/font/google"
 import Head from "next/head"
-import { lazy, Suspense, useCallback, useEffect, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useState } from "react"
 import NoInternetConnection from "@/components/Network/Network"
 import { useRouter } from "next/router"
 const inter = Inter({ subsets: ["latin"] })
 
-const PageLayout = lazy(() => import("@/components/Auth/PageLayout"));
-const Login = lazy(() => import("@/components/Login/Login"));
-
+const PageLayout = lazy(() => import("@/components/Auth/PageLayout"))
+const Login = lazy(() => import("@/components/Login/Login"))
+const Signup = lazy(() => import("@/components/Signup/Signup"))
+const LockScreen = lazy(() => import("@/components/LockScreen/LockScreen"))
 
 export default function Home() {
   const router = useRouter()
@@ -43,6 +44,20 @@ export default function Home() {
     [setIsAuthenticated]
   )
 
+  const renderAuthComponent = () => {
+    const { pathname } = router
+    switch (pathname) {
+      case "/login":
+        return <Login setIsAuthenticated={handleSetIsAuthenticated} />
+      case "/signup":
+        return <Signup setIsAuthenticated={handleSetIsAuthenticated} />
+      case "/lockscreen":
+        return <LockScreen setIsAuthenticated={handleSetIsAuthenticated} />
+      default:
+        return <Login setIsAuthenticated={handleSetIsAuthenticated} />
+    }
+  }
+
   return (
     <>
       <Head>
@@ -61,7 +76,7 @@ export default function Home() {
             </Suspense>
           ) : (
             <Suspense fallback={<div>Loading...</div>}>
-              <Login setIsAuthenticated={handleSetIsAuthenticated} />
+              {renderAuthComponent()}
             </Suspense>
           )
         ) : (

@@ -3,19 +3,21 @@
   background-color: rgb(12 74 110);
   color: white;
   font-size: 12px;
-  width: 16rem;
-  /* overflow-y: scroll !important;
-  overflow-x: hidden; */
+  min-width: 8rem;
+  overflow-y: auto;
   font-family: "Nunito", sans-serif;
 }
 .sidebar::-webkit-scrollbar-thumb {
   background-color: #888;
+}
+.main {
+  width: 15rem !important;
 }
 
 .site_logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 26px;
+  padding-top: 40px;
   cursor: pointer;
 }
