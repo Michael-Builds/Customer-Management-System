@@ -21,7 +21,7 @@ const NotFound = () => {
           <Image src={ErrorImage} height={160} width={160} alt="Logo" />
         </div>
         <p className="mt-8 text-md ">
-          It's looking like you may have taken a wrong turn. Don't worry... it
+          It is looking like you may have taken a wrong turn. Do not worry... it
           happens to the best of us. You might want to check your internet
           connection.
         </p>
