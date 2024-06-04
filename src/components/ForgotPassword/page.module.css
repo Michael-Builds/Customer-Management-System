@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(52, 110, 224, 1);
+  font-family: "Nunito", sans-serif;
 }
 
 .logo {
@@ -20,7 +21,7 @@
 .formContainer {
   background-color: white;
   width: 45vh;
-  height: 29vh;
+  height: 28vh;
   min-height: 50px;
   min-width: 400px;
   border-radius: 5px;

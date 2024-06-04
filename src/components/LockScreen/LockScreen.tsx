@@ -80,23 +80,32 @@ const LockScreen = ({ setIsAuthenticated }: any) => {
           </p>
         </div>
         <div className={styles.form}>
-          <TextInput
-            mt="md"
-            label="Email address"
+          <label htmlFor="email" className="block text-gray-700 mt-4">
+            Email address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
             placeholder="Enter your email"
-            className="text-gray-600"
+            className="appearance-none bg-transparent border-gray-300 text-sm border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
-          <Button fullWidth className="mt-6" onClick={handleLogin}>
+          <button
+            className="mt-6 bg-blue-500 text-sm w-full p-2 text-white rounded-sm hover:bg-blue-600"
+            onClick={handleLogin}
+          >
             Login
-          </Button>
+          </button>
         </div>
       </div>
       <div className={styles.others}>
         <div className={styles.sign_up}>
           <p className={styles.no_account_text}>Not you? return</p>
           <span className={styles.signup}>
-            <Link href="/signup" className="text-white font-bold">
-              Sign up
+            <Link href="/login" className="text-white font-medium">
+              Login
             </Link>
           </span>
         </div>

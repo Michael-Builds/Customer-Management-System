@@ -47,7 +47,7 @@ export const SideNav = () => {
                         hasChildren && toggleRouteExpansion(routeIndex)
                       }
                     >
-                      <div className="flex items-center gap-6">
+                      <div className="flex items-center gap-6 h-1">
                         <p>{item.icon}</p>
                         <Link href={item.href}>
                           <div>{item.label}</div>
