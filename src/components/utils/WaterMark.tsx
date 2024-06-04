@@ -2,6 +2,7 @@ import styles from "./page.module.css"
 import Link from "next/link"
 
 export const WaterMark = () => {
+  
   const getCurrentYear = () => {
     const currentYear = new Date().getFullYear()
     return currentYear

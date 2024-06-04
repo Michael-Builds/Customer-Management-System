@@ -8,6 +8,7 @@ import {
   Legend,
 } from "recharts"
 import styles from "./page.module.css"
+
 const yearly = [
   { label: "2001", imports: 21, exports: 20 },
   { label: "2002", imports: 35, exports: 15 },

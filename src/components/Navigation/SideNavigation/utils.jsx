@@ -9,10 +9,9 @@ import { BsFillMegaphoneFill } from "react-icons/bs"
 import { FaQuestion } from "react-icons/fa6"
 import { MdOutlineForum } from "react-icons/md"
 
-
 export const routes = [
     {
-        heading: "Main",
+        heading: "Menu",
         items: [
             {
                 label: "Dashboard",
@@ -40,9 +39,9 @@ export const routes = [
                 href: "#calendar",
                 icon: <FaLuggageCart size="1.1rem" stroke={`${1.5}`} />,
                 children: [
-                    { icons: "", label: "View All Orders", href: "#required-for-focus" },
-                    { icons: "", label: "Process Orders", href: "#required-for-focus" },
-                    { icons: "", label: "Manage Shipping", href: "#required-for-focus" },
+                    { icons: "", label: "View All Orders", href: "" },
+                    { icons: "", label: "Process Orders", href: "" },
+                    { icons: "", label: "Manage Shipping", href: "" },
                 ],
             },
             {
@@ -50,9 +49,9 @@ export const routes = [
                 href: "#",
                 icon: <PiUsersThreeFill size="1.2rem" stroke={`${1.5}`} />,
                 children: [
-                    { icons: "", label: "View All Customers", href: "#required-for-focus" },
-                    { icons: "", label: "Customer Details", href: "#required-for-focus" },
-                    { icons: "", label: "Customer Support", href: "#required-for-focus" },
+                    { icons: "", label: "View All Customers", href: "" },
+                    { icons: "", label: "Customer Details", href: "" },
+                    { icons: "", label: "Customer Support", href: "" },
                 ],
             },
             {
@@ -60,9 +59,9 @@ export const routes = [
                 href: "#calendar",
                 icon: <BsFillMegaphoneFill size="1rem" stroke={`${1.5}`} />,
                 children: [
-                    { icons: "", label: "Create Discount Codes", href: "#required-for-focus" },
-                    { icons: "", label: "Manage Promotions", href: "#required-for-focus" },
-                    { icons: "", label: "Email Campaigns", href: "#required-for-focus" },
+                    { icons: "", label: "Create Discount Codes", href: "" },
+                    { icons: "", label: "Manage Promotions", href: "" },
+                    { icons: "", label: "Email Campaigns", href: "" },
                 ],
             },
             {
@@ -70,9 +69,9 @@ export const routes = [
                 href: "#",
                 icon: <SiGoogleanalytics size="1rem" stroke={`${1.5}`} />,
                 children: [
-                    { icons: "", label: "View Site Traffic", href: "#required-for-focus" },
-                    { icons: "", label: "Conversion Rates", href: "#required-for-focus" },
-                    { icons: "", label: "Customer Behavior", href: "#required-for-focus" },
+                    { icons: "", label: "View Site Traffic", href: "" },
+                    { icons: "", label: "Conversion Rates", href: "" },
+                    { icons: "", label: "Customer Behavior", href: "" },
                 ],
             },
             {
@@ -80,9 +79,9 @@ export const routes = [
                 href: "#calendar",
                 icon: <HiMiniCog6Tooth size="1rem" stroke={`${1.5}`} />,
                 children: [
-                    { icons: "", label: "General Settings", href: "#required-for-focus" },
-                    { icons: "", label: "Payment Options ", href: "#required-for-focus" },
-                    { icons: "", label: "Shipping Settings", href: "#required-for-focus" },
+                    { icons: "", label: "General Settings", href: "" },
+                    { icons: "", label: "Payment Options ", href: "" },
+                    { icons: "", label: "Shipping Settings", href: "" },
                 ],
             },
             {
@@ -93,12 +92,98 @@ export const routes = [
                     {
                         icons: <FaQuestion size="0.9rem" />,
                         label: "FAQs & Knowledge Base",
-                        href: "#required-for-focus",
+                        href: ""
                     },
                     {
                         icons: <MdOutlineForum size="0.9rem" />,
                         label: "Community Forums ",
-                        href: "#required-for-focus",
+                        href: ""
+                    },
+                ],
+            },
+            {
+                label: "Help & Support",
+                href: "",
+                icon: <BiSupport size="1rem" stroke={`${1.5}`} />,
+                children: [
+                    {
+                        icons: <FaQuestion size="0.9rem" />,
+                        label: "FAQs & Knowledge Base",
+                        href: ""
+                    },
+                    {
+                        icons: <MdOutlineForum size="0.9rem" />,
+                        label: "Community Forums ",
+                        href: ""
+                    },
+                ],
+            },
+            {
+                label: "Help & Support",
+                href: "",
+                icon: <BiSupport size="1rem" stroke={`${1.5}`} />,
+                children: [
+                    {
+                        icons: <FaQuestion size="0.9rem" />,
+                        label: "FAQs & Knowledge Base",
+                        href: ""
+                    },
+                    {
+                        icons: <MdOutlineForum size="0.9rem" />,
+                        label: "Community Forums ",
+                        href: ""
+                    },
+                ],
+            },
+            {
+                label: "Help & Support",
+                href: "",
+                icon: <BiSupport size="1rem" stroke={`${1.5}`} />,
+                children: [
+                    {
+                        icons: <FaQuestion size="0.9rem" />,
+                        label: "FAQs & Knowledge Base",
+                        href: ""
+                    },
+                    {
+                        icons: <MdOutlineForum size="0.9rem" />,
+                        label: "Community Forums ",
+                        href: ""
+                    },
+                ],
+            },
+            {
+                label: "Help & Support",
+                href: "",
+                icon: <BiSupport size="1rem" stroke={`${1.5}`} />,
+                children: [
+                    {
+                        icons: <FaQuestion size="0.9rem" />,
+                        label: "FAQs & Knowledge Base",
+                        href: ""
+                    },
+                    {
+                        icons: <MdOutlineForum size="0.9rem" />,
+                        label: "Community Forums ",
+                        href: ""
+                    },
+                ],
+            },
+
+            {
+                label: "Help & Support",
+                href: "",
+                icon: <BiSupport size="1rem" stroke={`${1.5}`} />,
+                children: [
+                    {
+                        icons: <FaQuestion size="0.9rem" />,
+                        label: "FAQs & Knowledge Base",
+                        href: ""
+                    },
+                    {
+                        icons: <MdOutlineForum size="0.9rem" />,
+                        label: "Community Forums ",
+                        href: ""
                     },
                 ],
             },

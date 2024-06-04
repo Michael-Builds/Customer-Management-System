@@ -2,7 +2,9 @@ import { Inter } from "next/font/google"
 import Head from "next/head"
 import { lazy, Suspense, useCallback, useEffect, useState } from "react"
 import NoInternetConnection from "@/components/Network/Network"
+import Loader from "@/components/utils/Loader"
 import { useRouter } from "next/router"
+import React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 const PageLayout = lazy(() => import("@/components/Auth/PageLayout"))
@@ -44,19 +46,25 @@ export default function Home() {
     [setIsAuthenticated]
   )
 
-  const renderAuthComponent = () => {
+  const MemoizedLogin = React.memo(Login)
+  const MemoizedSignup = React.memo(Signup)
+  const MemoizedLockScreen = React.memo(LockScreen)
+
+  const renderAuthComponent = useCallback(() => {
     const { pathname } = router
     switch (pathname) {
       case "/login":
-        return <Login setIsAuthenticated={handleSetIsAuthenticated} />
+        return <MemoizedLogin setIsAuthenticated={handleSetIsAuthenticated} />
       case "/signup":
-        return <Signup setIsAuthenticated={handleSetIsAuthenticated} />
+        return <MemoizedSignup setIsAuthenticated={handleSetIsAuthenticated} />
       case "/lockscreen":
-        return <LockScreen setIsAuthenticated={handleSetIsAuthenticated} />
+        return (
+          <MemoizedLockScreen setIsAuthenticated={handleSetIsAuthenticated} />
+        )
       default:
-        return <Login setIsAuthenticated={handleSetIsAuthenticated} />
+        return <MemoizedLogin setIsAuthenticated={handleSetIsAuthenticated} />
     }
-  }
+  }, [router.pathname, handleSetIsAuthenticated])
 
   return (
     <>
@@ -71,13 +79,9 @@ export default function Home() {
       >
         {isOnline ? (
           isAuthenticated ? (
-            <Suspense fallback={<div>Loading...</div>}>
-              <PageLayout />
-            </Suspense>
+            <Suspense fallback={<Loader />}> <PageLayout /></Suspense>
           ) : (
-            <Suspense fallback={<div>Loading...</div>}>
-              {renderAuthComponent()}
-            </Suspense>
+            <Suspense fallback={<Loader />}>{renderAuthComponent()}</Suspense>
           )
         ) : (
           <NoInternetConnection />

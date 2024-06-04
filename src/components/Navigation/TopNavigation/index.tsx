@@ -20,7 +20,7 @@ export const TopBar = () => {
   }
 
   return (
-    <div className={styles.topbar}>
+    <div className={`${styles.topbar}`}>
       <div className={styles.top_items}>
         <div className="pl-8">
           <IoMenuOutline className="h-7 w-7 text-gray-600 cursor-pointer" />

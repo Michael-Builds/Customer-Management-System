@@ -1,10 +1,11 @@
 .topbar {
-  padding: 14px 12px;
+  padding: 9px;
   background-color: #ffffff;
   width: 100%;
   border-bottom: 1px solid #c9ccd0;
   font-family: "Nunito", sans-serif;
 }
+
 
 .top_items {
   display: flex;

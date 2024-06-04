@@ -2,8 +2,12 @@
   height: 100vh;
   padding: 15px 10px;
   font-family: "Nunito", sans-serif;
-  overflow-y: scroll !important;
+  overflow-y: auto;
   padding-bottom: 4rem;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgb(12 74 110);
 }
 
 .datacards {

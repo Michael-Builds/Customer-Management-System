@@ -2,6 +2,7 @@ import React from "react"
 import styles from "./page.module.css"
 import { Tabs } from "@mantine/core"
 import { SlBadge } from "react-icons/sl"
+import Loader from "@/components/utils/Loader"
 
 // Component for product information
 const ProductInformation = () => {

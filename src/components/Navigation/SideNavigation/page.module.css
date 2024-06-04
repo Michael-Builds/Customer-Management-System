@@ -1,28 +1,52 @@
-.site_logo {
+.sidebar {
+  height: 100%;
+  width: 17rem;
+  background-color: rgb(12 74 110);
+  color: white;
+  font-size: 14px;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.one {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
-  top: 0;
-  left: 0;
-}
-.routes {
-  font-size: 14px;
-}
-.sidebar {
-  height: 100%;
-  background-color: rgb(12 74 110);
-  color: white;
-  font-size: 12px;
-  min-width: 8rem;
-  overflow-y: auto;
-  font-family: "Nunito", sans-serif;
+  flex-grow: 1;
+  position: static !important;
+  margin-top: 13px;
+  padding-bottom: 12px;
 }
 
-.sidebar::-webkit-scrollbar-thumb {
+.two {
+  width: 100%;
+  display: flex;
+  flex-grow: 10;
+  overflow-y: auto;
+}
+.two::-webkit-scrollbar-thumb {
   background-color: #888;
 }
 
-.main {
-  width: 15rem !important;
+.three {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0.5;
+  gap: 12px;
+  background-color: rgb(33, 112, 157);
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerSection p {
+  font-size: 12px;
 }

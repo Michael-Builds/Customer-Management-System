@@ -1,8 +1,8 @@
-import styles from "./page.module.css";
+import styles from "./page.module.css"
 // import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import Image from "next/image";
-import Avatar from "../../../public/Assets/avatar-8.png";
-import Profiles from "./profile";
+import Image from "next/image"
+import Avatar from "../../../public/Assets/avatar-8.png"
+import Profiles from "./profile"
 
 const Profile = () => {
   return (
@@ -19,7 +19,7 @@ const Profile = () => {
       </div>
       <Profiles />
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile
