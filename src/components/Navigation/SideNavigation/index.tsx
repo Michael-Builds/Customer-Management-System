@@ -8,7 +8,6 @@ import Link from "next/link"
 import Avatar from "../../../../public/Assets/avatar-8.png"
 
 export const SideNav = () => {
-  
   const [expandedRoutes, setExpandedRoutes] = useState(
     routes.flatMap((category) => category.items.map(() => false))
   )
@@ -29,14 +28,14 @@ export const SideNav = () => {
       <div className={styles.two}>
         <section className="pb-3 w-full pt-8">
           {routes.map((category, categoryIndex) => (
-
             <div key={categoryIndex}>
               <div className="text-white text-md px-4 pt-2 pb-1 pt-4">
                 {category.heading}
               </div>
-              
+
               {category.items.map((item, itemIndex) => {
-                const routeIndex =  categoryIndex * category.items.length + itemIndex
+                const routeIndex =
+                  categoryIndex * category.items.length + itemIndex
                 const hasChildren = item.children && item.children.length > 0
 
                 return (

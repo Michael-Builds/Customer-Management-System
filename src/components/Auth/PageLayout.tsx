@@ -10,6 +10,7 @@ const validRoutes = [
   "/products/add",
   "/products/manage",
   "/customers",
+  "/invoice",
 ]
 
 const MemoizedSideNav = memo(SideNav)
